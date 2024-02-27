@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DescriptionProductActivity">
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/baseline_keyboard_backspace_24"
+        android:background="@color/white"
+        android:onClick="onClickBack"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="100dp"
+        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="#FFFFFF">
+
+        <ImageView
+            android:id="@+id/imgDetail"
+            android:layout_width="match_parent"
+            android:layout_height="308dp" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/txtDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardDetail"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="-40dp"
+        android:text="Descriptiom"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txtDescriptionData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtDescription"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp" />
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/heading"
+        android:layout_below="@id/txtDescriptionData"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:textSize="20sp"
+        android:text="Ratings &amp; Review"
+        android:textStyle="bold"/>
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingNumber"
+        android:layout_below="@+id/heading"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginStart="68dp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-black"/>
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        style="?android:ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ratingNumber"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp"
+        android:rating="4"
+        android:stepSize="1"
+        android:progressTint="#FFC107"/>
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/totalRating"
+        android:layout_below="@id/ratingBar"
+        android:layout_marginLeft="60dp"
+        android:layout_marginStart="68dp"
+        android:textSize="12sp" />
+
+
+</RelativeLayout>
